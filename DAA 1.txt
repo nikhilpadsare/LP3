@@ -19,33 +19,24 @@ void fibonacciNonRecursive(int N) {
     cout << endl;
 }
 
-int main() {
-    int N;
-    cout << "Enter the number of terms: ";
-    cin >> N;
-    fibonacciNonRecursive(N);
-    return 0;
-}
-
-
 #include <iostream>
-using namespace std;
-
-int main() {
+ using namespace std;
+ // Recursive function to return the nth Fibonacci number
+ int fibonacciRecursive(int n) {
+    if (n <= 1)
+        return n;
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+ }
+ int main() {
     int N;
     cout << "Enter the number of terms: ";
     cin >> N;
-
-    int a = 0, b = 1;
-    cout << "Fibonacci Series: ";
+    cout << "Fibonacci Series (Recursive): ";
     for (int i = 0; i < N; i++) {
-        cout << a << " ";
-        int next = a + b;
-        a = b;
-        b = next;
+        cout << fibonacciRecursive(i) << " ";
     }
     cout << endl;
-    return 0;
-}
+    return 0;
+ }
 
 
