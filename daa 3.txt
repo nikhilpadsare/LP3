@@ -27,3 +27,8 @@ public class KnapsackDP {
         System.out.println("Maximum value in Knapsack = " + knapsackDP(W, wt, val, n));
     }
 }
+
+
+
+
+write a program to solve 0-1 knapsack problem dynamic programming strategy
